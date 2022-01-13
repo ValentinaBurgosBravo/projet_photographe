@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 10px;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'BebasNeueRegular';
+}
+
+#profile nav {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Jost', sans-serif;
+    background-color: white;
+    margin: 0px;
+    align-items: start;
+    color: black;
+    font-size: 17px;
+    gap: 25px;
+    font-weight: 200;
+    align-items:start;
+}
+
+
+#dash
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    align-items: center ;
+
+}
+
+
+#gallery img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+
+img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+span {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  
+  span:before, span:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: rgb(0, 0, 0);
+  }
+  
+  span:before {
+    left: -2.5px;
+  }
+  span:after {
+    right: 2.5px;
+    background: rgb(0, 0, 0);
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  span:hover:before {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  span:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
+
+  i:hover {
+      opacity: 0.5;
+  }
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 120px;
+    padding: 10px;
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+
+
+    #dash {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    }
+
+    #gallery img {
+        width: 340px;
+        height: 240px;
+        border-radius: 2px;
+}
+
+
+#profile nav {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Jost', sans-serif;
+    background-color: white;
+    margin: 0px;
+    align-items: start;
+    color: black;
+    font-size: 17px;
+    gap: 25px;
+    font-weight: 200;
+    align-items:start;
+}
+
+#contact {
+    padding-top: 60px;
+}
+
+
+}
